@@ -50,7 +50,7 @@ else
     if ! grep -qF "$key" ~/.ssh/authorized_keys;
     then
         log "One or more of the keys does not exist. Adding all keys to ~/.ssh/authorized_keys"
-        log $key >> ~/.ssh/authorized_keys
+        echo $key >> ~/.ssh/authorized_keys
     else
         log "Key already exist!"
     fi
